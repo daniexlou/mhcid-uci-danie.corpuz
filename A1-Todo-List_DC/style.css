@@ -1,0 +1,140 @@
+/* Set up flexbox, load a default font */
+:root {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito', sans-serif;
+    min-height: 100vh;
+    padding-top: 3%;
+    --primary-color: #e0e0e0;
+    --primary-background: #1e1e1e;
+    --accent: #ffee8c;
+    --accent-dark: #c9b800;
+}
+
+/*Page background*/
+body { 
+    background-color: #111111;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    min-height: 100vh;
+    padding-top: 5%; 
+}
+
+#header {
+    font-size: 3rem;
+    color: var(--primary-color);
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+form {
+    width: 100%;
+    max-width: 540px;
+    display: flex;
+    padding: 0.8rem;
+}
+
+form input {
+    padding: 10px;
+    font-size: 17px;
+    border: none;
+    border-top-left-radius: 17px;
+    border-bottom-left-radius: 17px;
+    background-color: var(--primary-background);
+    color: var(--primary-color);
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    outline: none;
+}
+
+form input::placeholder {
+    color: #555555;
+}
+
+form input:hover {
+    cursor: text;
+    background-color: #262626
+}
+
+form input:focus {
+    background-color: #262626;
+}
+
+form button {
+    padding: 10px;
+    font-size: 17px;
+    border-top-right-radius: 17px;
+    border-bottom-right-radius: 17px;
+    min-width: 100px;
+    background-color: var(--accent);
+    color: #1e1900;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+}
+
+/* Part 2: Add animations for completing and removing events.
+Any further animations are up to you! */
+
+button {
+    border: none;
+    color: var(--primary-background);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.todo-list {
+    /* Removes the bullet points */
+    list-style: none;
+}
+
+.todo-div {
+    margin: 1rem;
+    display: flex;
+    padding: 0.25em 0.5em;
+    border-radius: 30px;
+    color: var(--primary-color);
+    background-color: var(--primary-background);
+}
+
+.todo-div li{
+    padding: 7px;
+    font-size: 20px;
+    flex: 1;
+}
+
+.check-btn, .delete-btn {
+    font-size: 17px;
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.fa-trash, .fa-check { 
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.remove {
+    opacity: 0;
+}
