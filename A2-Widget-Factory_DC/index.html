@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Load the spectrum library-->
+    <script src="https://jspm.dev/@spectrum-web-components/bundle/elements.js" type="module" async></script>
+    <!--Load the data files for widgets and shipping, then the script file.-->
+    <script src="widgets_data.js"></script>
+    <script src="shipping_data.js"></script>
+    <script src="script.js"></script>
+    <!--Load the external stylesheet and favicon.-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="store icon" href="favicon.ico">
+    <title>My Widget Store: Order</title>
+  </head>
+  <body onload="loadOrderPage()">
+    <sp-theme scale="large" color="light">
+      
+      <!--STEPPER-->
+      <nav class="stepper">
+        <span class="step-current">Order</span>
+        <span class="step-arrow">,</span>
+        <span class="step-inactive">Shipping</span>
+        <span class="step-current">,</span>
+        <span class="step-current">Summary</span>
+      </nav>
+
+      <!--WIDGET GRID-->
+        <div class="widget-grid">
+
+          <!-- Toy Boat -->
+          <sp-card class="widget-card">
+            <img slot="cover-photo" src="images/toyboat.jpg" alt="Toy Boat" class="card-img"/>
+            <div slot="heading" class="card-name">Toy Boat</div>
+            <div slot="subheading" class="card-price">$15.99</div>
+            <div slot="description" class="card-body">
+              <div class="star-row">
+                <span class="stars">★★★★★</span>
+                <span class="rating-num">4.6</span>
+              </div>
+            <div class="field-group">
+              <sp-field-label for="toyboat_quantity">QTY</sp-field-label>
+              <sp-number-field id="toyboat_quantity" min="0" max="10" value="0"></sp-number-field>
+            </div>
+            <div class="field-group">
+              <sp-field-label for="toyboat_color">COLOR</sp-field-label>
+              <input type="color" id="toyboat_color" class="color-picker" value="#ff0000"/>
+              </div>
+            </div>
+          </sp-card>
+        </div>
+
+          <!-- Paper Plane -->
+          <sp-card class="widget-card">
+            <img slot="cover-photo" src="images/paperplane.jpg" alt="Paper Plane" class="card-img"/>
+            <div slot="heading" class="card-name">Paper Plane</div>
+            <div slot="subheading" class="card-price">$8.52</div>
+            <div slot="description" class="card-body">
+              <div class="star-row">
+                <span class="stars">★★★★</span><span class="stars dim">★</span>
+                <span class="rating-num">4.2</span>
+              </div>
+              <div class="field-group">
+                <sp-field-label for="paperplane_quantity">QTY</sp-field-label>
+                <sp-number-field id="paperplane_quantity" min="0" max="10" value="0"></sp-number-field>
+              </div>
+              <div class="field-group">
+                <sp-field-label for="paperplane_color">COLOR</sp-field-label>
+                <input type="color" id="paperplane_color" class="color-picker" value="#ff0000"/>
+              </div>
+            </div>
+          </sp-card>
+
+          <!-- Stuffed Animal -->
+          <sp-card class="widget-card">
+            <img slot="cover-photo" src="images/stuffedanimal.jpg" alt="Stuffed Animal" class="card-img"/>
+            <div slot="heading" class="card-name">Stuffed Animal</div>
+            <div slot="subheading" class="card-price">$9.13</div>
+            <div slot="description" class="card-body">
+              <div class="star-row">
+                <span class="stars">★★★★</span><span class="stars dim">★</span>
+                <span class="rating-num">3.8</span>
+              </div>
+              <div class="field-group">
+                <sp-field-label for="stuffedanimal_quantity">QTY</sp-field-label>
+                <sp-number-field id="stuffedanimal_quantity" min="0" max="10" value="0"></sp-number-field>
+              </div>
+              <div class="field-group">
+                <sp-field-label for="stuffedanimal_color">COLOR</sp-field-label>
+                <input type="color" id="stuffedanimal_color" class="color-picker" value="#ff0000"/>
+              </div>
+            </div>
+          </sp-card>
+        
+          <!-- Train Car -->
+          <sp-card class="widget-card">
+            <img slot="cover-photo" src="images/traincar.jpg" alt="Train Car" class="card-img"/>
+            <div slot="heading" class="card-name">Train Car</div>
+            <div slot="subheading" class="card-price">$25.00</div>
+            <div slot="description" class="card-body">
+              <div class="star-row">
+                <span class="stars">★★</span><span class="stars dim">★★★</span>
+                <span class="rating-num">2.1</span>
+              </div>
+              <div class="field-group">
+                <sp-field-label for="traincar_quantity">QTY</sp-field-label>
+                <sp-number-field id="traincar_quantity" min="0" max="10" value="0"></sp-number-field>
+              </div>
+              <div class="field-group">
+                <sp-field-label for="traincar_color">COLOR</sp-field-label>
+                <input type="color" id="traincar_color" class="color-picker" value="#ff0000"/>
+              </div>
+            </div>
+          </sp-card>
+
+          </div><!-- /widget-grid -->
+
+      <p class="attribution">"<a rel="noopener noreferrer" href="https://www.flickr.com/photos/51638848@N00/3694330089">Toy boat</a>" by <a rel="noopener noreferrer" href="https://www.flickr.com/photos/51638848@N00">Jon Olav</a>, "<a rel="noopener noreferrer" href="https://www.flickr.com/photos/54133975@N08/20095707950">Cruelty to st￭ animals? #dogtoy #hungouttodry</a>" by <a rel="noopener noreferrer" href="https://www.flickr.com/photos/54133975@N08">Fresh On The Net</a>, "<a rel="noopener noreferrer" href="https://www.flickr.com/photos/99424477@N04/10562534896">Wooden toy train</a>" by <a rel="noopener noreferrer" href="https://www.flickr.com/photos/99424477@N04">prague.czech.photo</a>, and "<a rel="noopener noreferrer" href="https://www.flickr.com/photos/25368895@N00/3129971362">JAL Paper Plane</a>" by <a rel="noopener noreferrer" href="https://www.flickr.com/photos/25368895@N00">ayustety</a> are licensed under <a rel="noopener noreferrer" href="https://creativecommons.org/licenses/by/2.0/?ref=openverse">CC BY 2.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;" /><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;" /></a>.</p>
+      <p class="attribution">"<a rel="noopener noreferrer" href="https://creativecommons.org/licenses/by/4.0/">1fec.svg</a>" by <a rel="noopener noreferrer" href="https://github.com/twitter/twemoji">Twitter Twemoji</a> is licensed under <a rel="noopener noreferrer" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;" /><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;" /></a>.</p>
+      <!--TODO: you may choose a different way of navigating to the next page. Specifying the onclick to call "gotoShippingPage" should store any inputted data.-->
+      <sp-button variant=""accent" onclick=""gotoShippingPage()">Next: Shipping</sp-button>
+    </sp-theme>
+  </body>
+</html>
